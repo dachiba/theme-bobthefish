@@ -943,7 +943,7 @@ function __bobthefish_prompt_virtualfish -S -d "Display current Python virtual e
         if [ "$VIRTUAL_ENV_PROMPT" ]
             echo -ns $VIRTUAL_ENV_PROMPT
         else
-            echo -ns (string split -- / $VIRTUAL_ENV)[-2] ' '
+            echo -ns '\(' (string split -- / $VIRTUAL_ENV)[-2] '\)'
         end
     else if [ "$CONDA_DEFAULT_ENV" ]
         echo -ns (basename "$CONDA_DEFAULT_ENV") ' '
